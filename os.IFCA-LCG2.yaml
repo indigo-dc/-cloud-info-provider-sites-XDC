@@ -1,0 +1,64 @@
+site:
+    name: IFCA-LCG2
+    id: provider-IFCA-LCG2
+    is_public: false
+    country: Spain
+    country_code: ES
+    roc: NGI_IBERGRID
+    subgrid: SUBGRID 
+    giis_url: "ldap://gridiis01.ifca.es:2170/GLUE2DomainID=IFCA-LCG2,o=glue"
+    owner_contacts:
+        - aidaph@ifca.unican.es
+        - aloga@ifca.unican.es
+        - orviz@ifca.unican.es
+        - ds@lists.cnaf.infn.it
+    owner_contacts_iam:
+        - 71d1aa69-f13a-4c7f-a90a-319936fd3db4
+        - ab84f6d2-9583-47ec-99ba-8ff107786a8a
+        - 3d7e31e8-280e-4363-a9c3-db35bf95a37f
+        - 8b3b89cd-cf9d-6122-5bdb-49e655804fc9
+
+compute:
+    iam_enabled: true
+    total_cores: 0
+    total_ram: 0
+    max_dedicated_ram: 0
+    min_dedicated_ram: 0
+    accelerators_virt_type: UNKNOWN
+    total_accelerators: 0
+    max_accelerators: 0
+    min_accelerators: 0
+    hypervisor: UNKNOWN
+    hypervisor_version: UNKNOWN
+    service_production_level: production
+    capabilities:
+        - executionmanagement.dynamicvmdeploy
+        - security.accounting
+    failover: false
+    live_migration: false
+    vm_backup_restore: false
+    endpoints:
+        defaults:
+            middleware_version: Pike
+            api_endpoint_technology: webservice
+            api_authn_method: X509-VOMS
+            production_level: production
+    shares:
+        extreme-datacloud.eu:
+            auth:
+                project_id: 4c2edd3e824f4daeb7145c6992ebc3dc
+            network_info: infiniband
+            iam_organisation: eXtreme-DataCloud
+    templates:
+        defaults:
+            platform: amd64
+            network: public
+            network_in: undefined
+            network_out: true
+    images:
+        defaults:
+            platform: amd64
+            gpu_driver: 'NA'
+            gpu_cuda_driver: 'NA'
+            gpu_cudnn_driver: 'NA'
+
